@@ -1,15 +1,26 @@
 # Claude Code - Setup
 
-## Skills requeridos
+## Skills
 
-Al inicio de cada sesión, instalar los siguientes skills si no están presentes:
+Para restaurar todos los skills desde el lock file, ejecutar:
 
 ```bash
-npx skills add obra/superpowers
-npx skills add vercel-labs/agent-browser
+npx skills experimental_install
 ```
+
+Esto instala automáticamente los 17 skills registrados en `skills-lock.json`.
 
 ## Skills disponibles
 
-- **superpowers** (obra/superpowers): Metodología de desarrollo con brainstorming, planes, TDD, subagentes, code review y git worktrees.
-- **agent-browser** (vercel-labs/agent-browser): Automatización de navegador web.
+| Skill | Fuente |
+|---|---|
+| `agent-browser` | vercel-labs/agent-browser |
+| `karpathy-guidelines` | multica-ai/andrej-karpathy-skills |
+| `skill-creator` | anthropics/skills |
+| `brainstorming` + 13 más | obra/superpowers |
+
+## Agregar un skill nuevo (y sincronizar con GitHub)
+
+```cmd
+skills-add.bat autor/nombre-skill
+```
